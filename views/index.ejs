@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-2xl">SCATCH</h1>
+    <% if(error.length > 0){ %>
+        <div class="absolute top-5 left-1/2 -translte-x-1/2 -translate-y-1/2 px-4 py-2 rounded-md bg-red-500">
+            <span class="inline-block mt-1 mt-2 text-white">
+                <%= error %>
+            </span>
+        </div>
+    <% } %>
+    <div class="p-40 w-full h-[60vh] flex gap-30">
+        <div class="w-[50%]">
+            <h3 class="text-xl">welcome to <span class="text-blue-600">Scatch</span></h3>
+            <h4 class="pb-2">craete your account</h4>
+            <form action="/users/register" method="POST" class="gap-4 flex flex-col">
+                <input class="py-4 px-4 outline-none bg-gray-200 w-full rounded-lg text-gray-800" type="text" name="fullname" placeholder="Full Name">
+                <input class="py-4 px-4 outline-none bg-gray-200 w-full rounded-lg text-gray-800" type="email" name="email" placeholder="Email">
+                <input class="py-4 px-4 outline-none bg-gray-200 w-full rounded-lg text-gray-800" type="password" name="password" placeholder="Password">
+                <input class="py-4 outline-none bg-blue-600 w-full rounded-lg text-white" type="submit" value="Craete My Account">
+            </form>
+        </div>
+        <div class="w-[50%]">
+            <h4 class="pb-2 pt-8">Login your Account</h4>
+            <form action="/users/login" method="POST" class="gap-4 flex flex-col">
+                <input class="py-4 px-4 outline-none bg-gray-200 w-full rounded-lg text-gray-800" type="email" name="email" placeholder="Email">
+                <input class="py-4 px-4 outline-none bg-gray-200 w-full rounded-lg text-gray-800" type="password" name="password" placeholder="Password">
+                <input class="py-4 outline-none bg-blue-600 w-full rounded-lg text-white" type="submit" value="Login Your Account">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

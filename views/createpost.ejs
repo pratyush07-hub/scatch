@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <% if(success.length > 0){ %>
+        <div class="absolute top-5 left-1/2 -translte-x-1/2 -translate-y-1/2 px-4 py-2 rounded-md bg-green-500">
+            <span class="inline-block mt-1 mt-2 text-white">
+                <%= success %>
+            </span>
+        </div>
+    <% } %>
+    <div class="h-screen w-full">
+    <h1 class="text-2xl">SCATCH</h1>
+        <div class="p-4 flex">
+            <div class="w-[20%] h-full">
+                <h3>All Products</h3>
+                <h3>Create new product</h3>
+            </div>
+            <div class="w-[80%] h-full border border-gray-200 rounded-md pl-20 py-2">
+                <h1 class="text-2xl font-semibold">Create New Product</h1>
+                <form action="/products/create" method="POST" enctype="multipart/form-data">
+                <h2 class="text-xl font-semibold">Product Details</h2>
+                <label for="image" class="block mt-2">Product Image</label>
+                <input class="border border-gray-300 rounded-md p-2 mb-2" type="file" name="image">
+                    <div class="gap-4 flex flex-col">
+                        <div class="flex gap-10">
+                            <input class="py-2 px-4 outline-none bg-gray-200 w-2/4 rounded-md text-gray-800" type="text" name="name" placeholder="Product Name">
+                            <input class="py-2 px-4 outline-none bg-gray-200 w-1/4 rounded-md text-gray-800" type="text" name="price" placeholder="Product Price">
+                        </div>
+                        <input class="py-2 px-4 outline-none bg-gray-200 w-2/4 rounded-md text-gray-800" type="text" name="discount" placeholder="Discount Price">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2 mt-2">Panel Details</h3>
+                        <div class="gap-4 flex flex-col">
+                            <div class="flex gap-10">
+                                <input class="py-2 px-4 outline-none bg-gray-200 w-2/4 rounded-md text-gray-800" type="text" name="bgcolor" placeholder="Background Color">
+                                <input class="py-2 px-4 outline-none bg-gray-200 w-1/4 rounded-md text-gray-800" type="text" name="panelcolor" placeholder="Panel Color">
+                            </div>
+                            <input class="py-2 px-4 outline-none bg-gray-200 w-2/4 rounded-md text-gray-800" type="text" name="textcolor" placeholder="Text Color">
+                            <input class="py-2 outline-none bg-blue-600 w-2/4 rounded-md text-white" type="submit" value="Craete New Product">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+</html>

@@ -17,3 +17,15 @@ discount
 bgcolor
 panelcolor
 textcolor
+
+
+/ -> signup or login
+/shop -> shop
+/users/create -> cart
+/admin -> admin panel
+/owner/products -> show all products
+/owner/admin -> show admin panel to create products
+
+
+flash messages:- aap kisi route pe ho apne flash message create kar diya ab flash meassage yeh hai ki aap uss route pe kuch create kar sakte aor aap wahi se redirect kar sakte ho next route me and waha pe bhi data excess kar sakte ho
+express-session:- flash messages session use karte hai aor bina session ke flash messages create nahi kar saakte hai
